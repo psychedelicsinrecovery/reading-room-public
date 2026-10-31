@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reading Room · PIR®</title>
+<meta name="description" content="PIR®'s reading room: the procedures, decks and proposals Psychedelics In Recovery has made public, and how members ask for the private room.">
+<meta name="theme-color" content="#3b1f6e">
+<link rel="canonical" href="https://psychedelicsinrecovery.github.io/reading-room-public/">
+<meta property="og:site_name" content="PIR®">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://psychedelicsinrecovery.github.io/reading-room-public/">
+<meta property="og:title" content="Reading Room · PIR®">
+<meta property="og:description" content="Procedures, decks and proposals Psychedelics In Recovery has made public, and how members ask for the private room.">
+<link rel="icon" type="image/png" sizes="32x32" href="https://psychedelicsinrecovery.github.io/alex-desk-public/assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  /* PIR® purple, four shades (my-template/proposals-template/TONES.md): 5b2bb5 primary, 3b1f6e deep, 7c3aed mid, ede9fe tint */
+  :root {
+    --primary: #5b2bb5; --deep: #3b1f6e; --mid: #7c3aed; --tint: #ede9fe;
+    --bg: #faf8ff; --surface: #ffffff; --text: #1f1633; --muted: #5a4f70; --line: #ddd5f3;
+    --link: #5b2bb5; --chip-bg: #ede9fe; --chip-text: #3b1f6e; --soon-bg: #f1f5f9; --soon-text: #475569;
+    --shadow: 0 1px 2px rgba(59,31,110,.06), 0 6px 20px rgba(59,31,110,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #120c22; --surface: #1c1433; --text: #efeaff; --muted: #b9add6; --line: #33275a;
+      --link: #c4b5fd; --chip-bg: #2e2152; --chip-text: #ddd3ff; --soon-bg: #222a38; --soon-text: #cbd5e1;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 400 1.0625rem/1.6 Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--link); text-underline-offset: .18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--mid); outline-offset: 3px; border-radius: 4px; }
+  .skip { position: absolute; left: -9999px; top: 0; }
+  .skip:focus { left: 16px; top: 12px; background: var(--surface); padding: 8px 12px; z-index: 10; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero { background: linear-gradient(160deg, #3b1f6e 0%, #5b2bb5 70%, #7c3aed 100%); color: #fff; }
+  header.hero .wrap { padding-top: 40px; padding-bottom: 44px; }
+  .eyebrow { margin: 0 0 6px; font-size: .8125rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #ddd6fe; }
+  h1, h2, h3 { font-family: Fraunces, Georgia, "Times New Roman", serif; line-height: 1.2; }
+  h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 2.9rem); font-weight: 700; }
+  .lede { margin: 0; max-width: 46rem; font-size: 1.125rem; color: #f5f3ff; }
+  .hero nav { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hero nav a {
+    color: #fff; text-decoration: none; font-weight: 600; font-size: .9375rem;
+    border: 1px solid rgba(255,255,255,.45); border-radius: 999px; padding: 7px 14px; min-height: 40px; display: inline-flex; align-items: center;
+  }
+  .hero nav a:hover { background: rgba(255,255,255,.14); }
+
+  main section { padding: 36px 0 8px; }
+  h2 { margin: 0 0 6px; font-size: 1.6rem; color: var(--text); }
+  h2 + p.sub { margin: 0 0 18px; color: var(--muted); }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 18px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  }
+  .card h3 { margin: 4px 0 6px; font-size: 1.2rem; }
+  .card p { margin: 0 0 12px; color: var(--muted); }
+  .card .go { margin-top: auto; font-weight: 600; }
+  .chip { align-self: flex-start; font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+          padding: 3px 9px; border-radius: 999px; background: var(--chip-bg); color: var(--chip-text); }
+  .chip.soon { background: var(--soon-bg); color: var(--soon-text); }
+  ul.links { list-style: none; margin: 0 0 12px; padding: 0; }
+  ul.links li { margin: 0 0 6px; }
+
+  ol.steps { counter-reset: s; list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  ol.steps li {
+    counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px 14px 60px; position: relative;
+  }
+  ol.steps li::before {
+    content: counter(s); position: absolute; left: 16px; top: 14px; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--primary); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: .95rem;
+  }
+  ol.steps strong { display: block; }
+  .note { margin: 18px 0 0; padding: 12px 16px; border-left: 4px solid var(--mid); background: var(--chip-bg); border-radius: 0 10px 10px 0; color: var(--text); }
+
+  footer { margin-top: 44px; border-top: 1px solid var(--line); }
+  footer .wrap { padding-top: 20px; padding-bottom: 32px; color: var(--muted); font-size: .9375rem; }
+  footer p { margin: 0 0 8px; }
+  @media (prefers-reduced-motion: no-preference) { a, .hero nav a { transition: background-color .15s ease; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the reading room</a>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Psychedelics In Recovery™</p>
+    <h1>PIR® Reading Room</h1>
+    <p class="lede">What PIR® has made ready for visitors: how our approved work gets done, the decks that walk you through it,
+      and anything the Board chooses to share. Drafts stay with members until they're ready.</p>
+    <nav aria-label="On this page">
+      <a href="#public">Open to everyone</a>
+      <a href="#members">For members</a>
+      <a href="#access">Ask for access</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section id="public" aria-labelledby="public-h">
+    <div class="wrap">
+      <h2 id="public-h">Open to everyone</h2>
+      <p class="sub">No account needed. Each of these is published from a private original, and only what an officer has listed.</p>
+      <div class="grid">
+        <article class="card">
+          <span class="chip">Procedures</span>
+          <h3>Standard operating procedures</h3>
+          <p>How PIR® does an approved thing, step by step, so anyone in service can do it. Nothing is listed yet: procedures appear
+            here once an officer says one is ready.</p>
+          <a class="go" href="https://github.com/psychedelicsinrecovery/ops-standard-operating-procedures-public">Open the public procedures</a>
+        </article>
+        <article class="card">
+          <span class="chip">Decks</span>
+          <h3>Slide decks</h3>
+          <ul class="links">
+            <li><a href="https://github.com/drasticstatic/my-template/blob/main/decks/my-template-walkthrough.marp.pdf">How proposals, procedures and changes travel</a> (PDF, 16 slides)</li>
+            <li>PIR®'s own welcome deck <span class="chip soon">Coming</span></li>
+          </ul>
+          <p>A deck is a walk-through, never a decision.</p>
+        </article>
+        <article class="card">
+          <span class="chip">Board</span>
+          <h3>What the Board has published</h3>
+          <p>Proposals are read by members while they're open. Anything the Board chooses to share with everyone appears in its public folder.</p>
+          <a class="go" href="https://github.com/psychedelicsinrecovery/board-of-directors-public/tree/main/published">Open the Board's published folder</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="members" aria-labelledby="members-h">
+    <div class="wrap">
+      <h2 id="members-h">For members</h2>
+      <p class="sub">The private room holds PIR®'s proposals, procedures and decks while they're drafts, as PDFs you read in the browser.</p>
+      <div class="grid">
+        <article class="card">
+          <span class="chip">Members only</span>
+          <h3>The private reading room</h3>
+          <p>Sign in to GitHub first. If you're a reader, this opens; if you see "404", you're not on the list yet (see below).</p>
+          <a class="go" href="https://github.com/psychedelicsinrecovery/reading-room">Open the private room</a>
+        </article>
+        <article class="card">
+          <span class="chip">Your helper</span>
+          <h3>Bringing an AI helper</h3>
+          <p>A helper can read the room with a read-only token that names only the reading room. Never paste a password into a chat.
+            The steward will walk you through it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="access" aria-labelledby="access-h">
+    <div class="wrap">
+      <h2 id="access-h">Ask for access</h2>
+      <p class="sub">Three steps. Your GitHub name is shared only with the stewards.</p>
+      <ol class="steps">
+        <li><strong>Have a GitHub account with two-factor on.</strong> Free is fine. Use a name you're comfortable with; anonymity comes first.</li>
+        <li><strong>Ask.</strong> Type <code>/github</code> in <a href="https://discord.gg/MyprTq8w95">PIR®'s Discord</a>, or use the
+          <a href="https://psychedelicsinrecovery.github.io/alex-desk-public/portal.html">web helpdesk</a>, and say "reading room, please".</li>
+        <li><strong>Accept the invitation.</strong> On an officer's yes you're added to the readers. Accept the email (or the bell on GitHub), then open the private room.</li>
+      </ol>
+      <p class="note">Reading is all the room gives: nobody can change anything in it by reading. If a link doesn't open, send the address and the error, never a password.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="https://www.psychedelicsinrecovery.org/">psychedelicsinrecovery.org</a> ·
+       <a href="https://github.com/psychedelicsinrecovery/.github/blob/main/CONTACTS.md">Who's who</a> ·
+       <a href="https://github.com/psychedelicsinrecovery">PIR® on GitHub</a></p>
+    <p>This page is published from PIR®'s private reading room and is never edited here.</p>
+  </div>
+</footer>
+</body>
+</html>
