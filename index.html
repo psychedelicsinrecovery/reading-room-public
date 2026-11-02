@@ -88,6 +88,16 @@
   footer { margin-top: 44px; border-top: 1px solid var(--line); }
   footer .wrap { padding-top: 20px; padding-bottom: 32px; color: var(--muted); font-size: .9375rem; }
   footer p { margin: 0 0 8px; }
+  svg.i { width: 1.1em; height: 1.1em; vertical-align: -0.18em; margin-right: .35em; color: var(--mid); flex: none; }
+  header.hero svg.i, .hero nav svg.i { color: #ddd6fe; }
+  ul.docs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  ul.docs li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start; }
+  ul.docs li > div { min-width: 0; overflow-wrap: anywhere; }
+  ul.docs li a { font-weight: 600; }
+  ul.docs li span.what { display: block; color: var(--muted); font-size: .95rem; }
+  .door { background: var(--surface); border: 2px solid var(--primary); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow); }
+  .door h3 { margin: 0 0 6px; font-size: 1.3rem; }
+  .door .go { display: inline-flex; align-items: center; margin-top: 6px; font-weight: 700; }
   @media (prefers-reduced-motion: no-preference) { a, .hero nav a { transition: background-color .15s ease; } }
 </style>
 </head>
@@ -101,14 +111,47 @@
     <p class="lede">What PIR® has made ready for visitors: how our approved work gets done, the decks that walk you through it,
       and anything the Board chooses to share. Drafts stay with members until they're ready.</p>
     <nav aria-label="On this page">
+      <a href="#read">Read now</a>
+      <a href="#members">The members' room</a>
       <a href="#public">Open to everyone</a>
-      <a href="#members">For members</a>
       <a href="#access">Ask for access</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
+  <section id="read" aria-labelledby="read-h">
+    <div class="wrap">
+      <h2 id="read-h"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14" /><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg>Read now</h2>
+      <p class="sub">PDFs you open in the browser. Each one arrived here from the members' room after a check that read every word.</p>
+      <ul class="docs" id="docs">
+        <li id="docs-empty"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg><div>Nothing has arrived yet: the first copy from the members' room is waiting for its key. Members can read everything now in
+          <a href="https://github.com/psychedelicsinrecovery/reading-room">the members' room</a>.</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="members" aria-labelledby="members-h">
+    <div class="wrap">
+      <h2 id="members-h">The members' room</h2>
+      <p class="sub">Everything on this page started there. The private room holds PIR®'s proposals, procedures and decks while they're drafts, as PDFs you read in the browser.</p>
+      <div class="door">
+        <span class="chip">Members only</span>
+        <h3><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4h3a2 2 0 0 1 2 2v14" /><path d="M2 20h3" /><path d="M13 20h9" /><path d="M10 12v.01" /><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z" /></svg>The way in: PIR®'s members' reading room</h3>
+        <p>Sign in to GitHub first. If you're a reader, this opens; if you see "404", you're signed out or not on the list yet (see below).</p>
+        <a class="go" href="https://github.com/psychedelicsinrecovery/reading-room">Open the members' room</a>
+      </div>
+      <div class="grid" style="margin-top:16px">
+        <article class="card">
+          <span class="chip">Your helper</span>
+          <h3><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2" /><path d="M20 14h2" /><path d="M15 13v2" /><path d="M9 13v2" /></svg>Bringing an AI helper</h3>
+          <p>A helper can read the room with a read-only token that names only the reading room. Never paste a password into a chat.
+            The steward will walk you through it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="public" aria-labelledby="public-h">
     <div class="wrap">
       <h2 id="public-h">Open to everyone</h2>
@@ -116,46 +159,25 @@
       <div class="grid">
         <article class="card">
           <span class="chip">Procedures</span>
-          <h3>Standard operating procedures</h3>
-          <p>How PIR® does an approved thing, step by step, so anyone in service can do it. Nothing is listed yet: procedures appear
-            here once an officer says one is ready.</p>
+          <h3><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 12h-5" /><path d="M15 8h-5" /><path d="M19 17V5a2 2 0 0 0-2-2H4" /><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" /></svg>Standard operating procedures</h3>
+          <p>How PIR® does an approved thing, step by step, so anyone in service can do it. The procedures every organisation in the
+            family shares appear there, each beside its PDF; start with SOP-COM-001, <em>New to GitHub: your first hour</em>.</p>
           <a class="go" href="https://github.com/psychedelicsinrecovery/ops-standard-operating-procedures-public">Open the public procedures</a>
         </article>
         <article class="card">
           <span class="chip">Decks</span>
-          <h3>Slide decks</h3>
+          <h3><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20" /><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" /><path d="m7 21 5-5 5 5" /></svg>Slide decks</h3>
           <ul class="links">
             <li><a href="https://github.com/drasticstatic/my-template/blob/main/decks/my-template-walkthrough.marp.pdf">How proposals, procedures and changes travel</a> (PDF, 16 slides)</li>
-            <li><a href="https://github.com/psychedelicsinrecovery/.github/blob/main/decks/welcome.marp.pdf">Welcome to PIR®</a> (PDF, 10 slides): where everything lives, how a change travels, how to ask for access</li>
+            <li><a href="https://github.com/psychedelicsinrecovery/.github/blob/main/decks/welcome.marp.pdf">Welcome to PIR®</a> (PDF, 12 slides): seven stops from "no GitHub account" to "I read, I answer, and my helper reads with me", anonymity first</li>
           </ul>
           <p>A deck is a walk-through, never a decision.</p>
         </article>
         <article class="card">
           <span class="chip">Board</span>
-          <h3>What the Board has published</h3>
+          <h3><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22" /><line x1="6" x2="6" y1="18" y2="11" /><line x1="10" x2="10" y1="18" y2="11" /><line x1="14" x2="14" y1="18" y2="11" /><line x1="18" x2="18" y1="18" y2="11" /><polygon points="12 2 20 7 4 7" /></svg>What the Board has published</h3>
           <p>Proposals are read by members while they're open. Anything the Board chooses to share with everyone appears in its public folder.</p>
           <a class="go" href="https://github.com/psychedelicsinrecovery/board-of-directors-public/tree/main/published">Open the Board's published folder</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="members" aria-labelledby="members-h">
-    <div class="wrap">
-      <h2 id="members-h">For members</h2>
-      <p class="sub">The private room holds PIR®'s proposals, procedures and decks while they're drafts, as PDFs you read in the browser.</p>
-      <div class="grid">
-        <article class="card">
-          <span class="chip">Members only</span>
-          <h3>The private reading room</h3>
-          <p>Sign in to GitHub first. If you're a reader, this opens; if you see "404", you're not on the list yet (see below).</p>
-          <a class="go" href="https://github.com/psychedelicsinrecovery/reading-room">Open the private room</a>
-        </article>
-        <article class="card">
-          <span class="chip">Your helper</span>
-          <h3>Bringing an AI helper</h3>
-          <p>A helper can read the room with a read-only token that names only the reading room. Never paste a password into a chat.
-            The steward will walk you through it.</p>
         </article>
       </div>
     </div>
@@ -181,8 +203,31 @@
     <p><a href="https://www.psychedelicsinrecovery.org/">psychedelicsinrecovery.org</a> ·
        <a href="https://github.com/psychedelicsinrecovery/.github/blob/main/CONTACTS.md">Who's who</a> ·
        <a href="https://github.com/psychedelicsinrecovery">PIR® on GitHub</a></p>
-    <p>This page is published from PIR®'s private reading room and is never edited here.</p>
+    <p>This page is published from PIR®'s private reading room and is never edited here. Icons: <a href="https://lucide.dev">Lucide</a> (ISC).</p>
   </div>
 </footer>
+<script>
+/* Lists exactly what the last sync carried (room-manifest.json, written by the sync). No manifest yet: the note above stays. */
+(function () {
+  var T = {"proposals/pdf/000-start-here.pdf": ["Proposal 000 · Start here", "how proposals read, how to answer, how to bring your AI helper, five GitHub words"], "procedures/pdf/COM/SOP-COM-001-new-to-github-your-first-hour.pdf": ["SOP-COM-001 · New to GitHub: your first hour", "your own account and password, two-factor, the invitation, five words, the reading room, a helper"], "procedures/pdf/OPS/SOP-OPS-001-how-a-change-travels.pdf": ["SOP-OPS-001 · How a change travels", "preview, Promote, main, the public twin"], "procedures/pdf/OPS/SOP-OPS-002-pull-requests-and-promotes.pdf": ["SOP-OPS-002 · Pull requests and Promotes", "who opens, who merges, merge never squash, the honest history"], "procedures/pdf/OPS/SOP-OPS-003-private-houses-everything-public-lanes-witness.pdf": ["SOP-OPS-003 · Private houses everything, public lanes witness", "how a page reaches this room, and the check that reads every file"], "procedures/pdf/IT/SOP-IT-001-vpn-dns-resolver-stalls.pdf": ["SOP-IT-001 · VPN and DNS resolver stalls", "how to tell, how to check, how to fix"], "procedures/pdf/IT/SOP-IT-002-reading-room-and-helper-access.pdf": ["SOP-IT-002 · Reading room and helper access", "browser first, a token only if needed"], "procedures/pdf/IT/SOP-IT-003-observer-dashboards-local-by-default.pdf": ["SOP-IT-003 · Observer dashboards", "local by default, remote access on purpose"], "procedures/pdf/GOV/SOP-GOV-002-github-collaboration.pdf": ["SOP-GOV-002 · GitHub collaboration", "organisations, teams, issues, discussions, pull requests, Pages"]};
+  var ICON = '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></svg>';
+  fetch('room-manifest.json', {cache: 'no-store'}).then(function (r) { return r.ok ? r.json() : null; }).then(function (m) {
+    if (!m || !m.files || !m.files.length) return;
+    var ul = document.getElementById('docs'); ul.innerHTML = '';
+    var order = Object.keys(T), files = m.files.slice().sort(function (x, y) {
+      var a = order.indexOf(x), b = order.indexOf(y); return (a < 0 ? 999 : a) - (b < 0 ? 999 : b) || (x < y ? -1 : 1);
+    });
+    files.forEach(function (f) {
+      if (!/\.pdf$/i.test(f)) return;
+      var t = T[f] || [f.split('/').pop().replace(/\.pdf$/i, '').replace(/-/g, ' '), ''];
+      var li = document.createElement('li'); li.innerHTML = ICON;
+      var d = document.createElement('div'); var a = document.createElement('a');
+      a.href = f; a.textContent = t[0]; d.appendChild(a);
+      if (t[1]) { var s = document.createElement('span'); s.className = 'what'; s.textContent = t[1]; d.appendChild(s); }
+      li.appendChild(d); ul.appendChild(li);
+    });
+  }).catch(function () {});
+})();
+</script>
 </body>
 </html>
