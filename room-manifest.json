@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T22:37Z",
+ "generated": "2026-11-03T03:43Z",
  "files": [
   "assets/icons/LICENSE",
   "assets/icons/book-open.svg",
@@ -9,12 +9,15 @@
   "assets/icons/door-open.svg",
   "assets/icons/file-check.svg",
   "assets/icons/folder-lock.svg",
+  "assets/icons/footprints.svg",
   "assets/icons/git-merge.svg",
+  "assets/icons/git-pull-request.svg",
   "assets/icons/globe.svg",
   "assets/icons/history.svg",
   "assets/icons/landmark.svg",
   "assets/icons/list-checks.svg",
   "assets/icons/lock.svg",
+  "assets/icons/map-pin.svg",
   "assets/icons/monitor-smartphone.svg",
   "assets/icons/network.svg",
   "assets/icons/presentation.svg",
